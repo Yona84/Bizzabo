@@ -1,28 +1,22 @@
-export interface ArtistInfoProps {
-  image_url?: string;
-  name: string;
-  favEvents?: string[];
-}
-
-export interface ArtistEventsProps {
-  venue: EventVenue;
-  id: string;
-  description: string;
-  lineup: string[];
-  datetime: string;
-  offers: Offer[];
-}
-
-interface Offer {
-  status: string;
-  type: string;
-}
-
-interface EventVenue {
-  city: string;
-  country: string;
+export interface DriversData {
+  _id: string;
+  name: Name;
   latitude: string;
-  location: string;
   longitude: string;
-  name: string;
+  picture: string;
+  age: number;
+}
+
+interface Name {
+  first: string;
+  last: string;
+}
+
+export interface TasksData {
+  _id: string;
+  title: string;
+  latitude: string;
+  longitude: string;
+  scheduled_for: string;
+  assignedToDriver: string;
 }
